@@ -60,6 +60,9 @@ class QuizTableTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         quizName = []
         quizDesc = []
+        MathQuiz = []
+        MarvelQuiz = []
+        ScienceQuiz = []
         
         print("Derry derry 1234")
         let nav = self.navigationController as! Nav
@@ -74,7 +77,7 @@ class QuizTableTableViewController: UITableViewController {
             ScienceQuiz = [Question(question: "What is absolute zero?", answers: ["0°F", "167°F", "-459.67°F", "-500°F"], correctAnswer: "-459.67°F"), Question(question: "Who is known as the father of physics?", answers: ["Albert Einstein", "Isaac Newton", "Henry Ford", "Tony Stark"], correctAnswer: "Isaac Newton")]
         } else {
         print("\(nav.newQuiz)Derry Cheng")
-        let jsonObj = nav.newQuiz as! NSArray
+        let jsonObj = nav.newQuiz as NSArray
       
             for subject in jsonObj {
                 
@@ -105,7 +108,7 @@ class QuizTableTableViewController: UITableViewController {
                     
                     print("Answer: \(answer)")
                     print ("Text: \(text)")
-                    for choice in answers as! NSArray{
+                    for choice in answers as NSArray{
                         print("Choices: \(choice)")
                     }
                 }
