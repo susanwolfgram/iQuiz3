@@ -93,15 +93,17 @@ class QuizTableTableViewController: UITableViewController {
                 for question in questions as! NSArray{
                     let answers = question["answers"] as! [String]
                     let answer = question["answer"] as! String
+                    let answerWord = answers[(Int(answer)! - 1)]
+                    
                     let text = question["text"]as! String
                     
                     switch title {
                     case "Science!":
-                        ScienceQuiz.append(Question(question: text, answers: answers, correctAnswer: answer))
+                        ScienceQuiz.append(Question(question: text, answers: answers, correctAnswer: answerWord))
                     case "Marvel Super Heroes":
-                        MarvelQuiz.append(Question(question: text, answers: answers, correctAnswer: answer))
+                        MarvelQuiz.append(Question(question: text, answers: answers, correctAnswer: answerWord))
                     case "Mathematics":
-                        MathQuiz.append(Question(question: text, answers: answers, correctAnswer: answer))
+                        MathQuiz.append(Question(question: text, answers: answers, correctAnswer: answerWord))
                     default:
                         break
                     }
