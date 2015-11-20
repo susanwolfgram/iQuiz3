@@ -68,9 +68,9 @@ class QuizTableTableViewController: UITableViewController {
         let nav = self.navigationController as! Nav
         
         if nav.newQuiz.count < 1 {
-            quizName = ["Math", "Marvel", "Science"]
+            quizName = ["Science!", "Marvel Super Heroes", "Mathematics"]
            
-            quizDesc = ["Addition and Subtraction", "Avengers and More", "Facts and Famous Names"]
+            quizDesc = ["Because SCIENCE!",  "Avengers, Assemble!", "Did you pass the third grade?"]
             
             MathQuiz = [Question(question: "2+2?", answers: ["4", "5", "6", "7"], correctAnswer: "4"), Question(question: "3+3?", answers: ["4", "5", "6", "7"], correctAnswer: "6")]
             MarvelQuiz = [Question(question: "What does the R is JARVIS stand for?", answers: ["Rich", "Rather", "Run", "Robot"], correctAnswer: "Rather"), Question(question: "Capt. America's shield contains steel &...", answers: ["Vibranium", "Iron", "Gold", "Bronze"], correctAnswer: "Vibranium")]
@@ -167,13 +167,13 @@ class QuizTableTableViewController: UITableViewController {
             
             
         switch cell.label1.text! {
-        case "Math" :
+        case "Mathematics" :
             questionController.questions = self.MathQuiz
             questionController.navigationItem.title = "Math Quiz"
-        case "Marvel" :
+        case "Marvel Super Heroes" :
             questionController.questions = self.MarvelQuiz
             questionController.navigationItem.title = "Marvel Quiz"
-        case "Science" :
+        case "Science!" :
             questionController.questions = self.ScienceQuiz
             questionController.navigationItem.title = "Science Quiz"
         default :

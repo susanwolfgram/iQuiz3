@@ -48,7 +48,7 @@ class QuestionViewController: UITableViewController {
         cell.data = self.questions[indexPath.row].answers
         //cell.corAnswer = self.questions[indexPath.row].answers[Int(correctAnswer)!]
         let num = Int(self.questions[indexPath.row].correctAnswer)
-        cell.corAnswer = self.questions[indexPath.row].answers[num!]
+        cell.corAnswer = self.questions[indexPath.row].answers[num! - 1]
 //        print(num)
 //        print("123irjqk3ng")
         return cell
